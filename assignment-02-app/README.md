@@ -10,7 +10,7 @@ Despliegue de aplicación estática en AWS usando S3, CloudFront, GitHub Actions
 
 Configuración de sincronización entre Doppler y el repositorio en GitHub.
 
-![Doppler Sync](docs/screenshots/doppler-sync.png)
+![Doppler Sync](docs/screenshots/doppler-sync.png.png)
 
 ---
 
@@ -19,7 +19,7 @@ Configuración de sincronización entre Doppler y el repositorio en GitHub.
 
 Variables creadas en el entorno `prd` dentro de Doppler (valores ocultos).
 
-![Doppler Variables](docs/screenshots/doppler-variables.png)
+![Doppler Variables](docs/screenshots/doppler-variables.png.png)
 
 ---
 
@@ -29,7 +29,7 @@ Variables creadas en el entorno `prd` dentro de Doppler (valores ocultos).
 
 Secretos sincronizados automáticamente desde Doppler hacia GitHub.
 
-![GitHub Secrets](docs/screenshots/github-secrets.png)
+![GitHub Secrets](docs/screenshots/github-secrets.png.png)
 
 ---
 
@@ -37,7 +37,7 @@ Secretos sincronizados automáticamente desde Doppler hacia GitHub.
 ### 4. Aplicación desplegada y funcionando
 Aplicación estática servida desde CloudFront.
 
-![Aplicación Funcionando](docs/screenshots/app-running.png)
+![Aplicación Funcionando](docs/screenshots/app-running.png.png)
 
 ---
 
