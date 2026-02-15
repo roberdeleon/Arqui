@@ -1,73 +1,61 @@
-# React + TypeScript + Vite
+# Assignment-02  
+Despliegue de aplicación estática en AWS usando S3, CloudFront, GitHub Actions y Doppler.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 📸 Evidencias del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 1️⃣ Integración Doppler - Config Syncs
 
-## React Compiler
+Configuración de sincronización entre Doppler y el repositorio en GitHub.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![Doppler Sync](docs/screenshots/doppler-sync.png)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### 2️⃣ Variables configuradas en Doppler
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Variables creadas en el entorno `prd` dentro de Doppler (valores ocultos).
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+![Doppler Variables](docs/screenshots/doppler-variables.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+---
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 3️⃣ Secretos en GitHub Actions
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Secretos sincronizados automáticamente desde Doppler hacia GitHub.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+![GitHub Secrets](docs/screenshots/github-secrets.png)
+
+---
+
+### 4️⃣ Aplicación desplegada y funcionando
+
+Aplicación estática servida desde CloudFront.
+
+![Aplicación Funcionando](docs/screenshots/app-running.png)
+
+---
+
+## 🌍 URL Pública de la Aplicación
+
+La aplicación se encuentra disponible en:
+
+👉 https://d3r3mvqv0385y9.cloudfront.net
+
+---
+
+## 🛠 Tecnologías utilizadas
+
+- Vite + React + TypeScript
+- GitHub Actions (CI/CD)
+- Amazon S3
+- Amazon CloudFront (CDN)
+- Doppler (Gestión de secretos)
+
+---
+
+## 👨‍💻 Autor
+
+Robert De Leon  
+Assignment-02  
