@@ -3,9 +3,10 @@ Despliegue de aplicación estática en AWS usando S3, CloudFront, GitHub Actions
 
 ---
 
-## 📸 Evidencias del Proyecto
+##  Evidencias del Proyecto
 
-### 1️⃣ Integración Doppler - Config Syncs
+
+### 1. Integración Doppler - Config Syncs
 
 Configuración de sincronización entre Doppler y el repositorio en GitHub.
 
@@ -13,7 +14,8 @@ Configuración de sincronización entre Doppler y el repositorio en GitHub.
 
 ---
 
-### 2️⃣ Variables configuradas en Doppler
+
+### 2. Variables configuradas en Doppler
 
 Variables creadas en el entorno `prd` dentro de Doppler (valores ocultos).
 
@@ -21,7 +23,9 @@ Variables creadas en el entorno `prd` dentro de Doppler (valores ocultos).
 
 ---
 
-### 3️⃣ Secretos en GitHub Actions
+
+### 3. Secretos en GitHub Actions
+
 
 Secretos sincronizados automáticamente desde Doppler hacia GitHub.
 
@@ -29,15 +33,16 @@ Secretos sincronizados automáticamente desde Doppler hacia GitHub.
 
 ---
 
-### 4️⃣ Aplicación desplegada y funcionando
 
+### 4. Aplicación desplegada y funcionando
 Aplicación estática servida desde CloudFront.
 
 ![Aplicación Funcionando](docs/screenshots/app-running.png)
 
 ---
 
-## 🌍 URL Pública de la Aplicación
+
+## 5. URL Pública de la Aplicación
 
 La aplicación se encuentra disponible en:
 
@@ -45,7 +50,17 @@ La aplicación se encuentra disponible en:
 
 ---
 
-## 🛠 Tecnologías utilizadas
+
+## 5. URL Pública de la Aplicación
+
+La aplicación se encuentra disponible en:
+
+  https://d3r3mvqv0385y9.cloudfront.net
+
+---
+
+##  Tecnologías utilizadas
+
 
 - Vite + React + TypeScript
 - GitHub Actions (CI/CD)
@@ -55,7 +70,8 @@ La aplicación se encuentra disponible en:
 
 ---
 
-## 👨‍💻 Autor
 
-Robert De Leon  
-Assignment-02  
+##  Autor
+
+Robert De Leon Herrera 
+ 
