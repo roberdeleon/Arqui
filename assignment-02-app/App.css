@@ -1,0 +1,32 @@
+@media (max-width: 860px) {
+  .container { padding: 22px 14px 46px; }
+
+  .nav {
+    padding: 14px 14px;
+    gap: 10px;
+  }
+
+  .brand { font-size: 14px; }
+  .pill { font-size: 11px; padding: 6px 10px; }
+
+  .hero { padding: 20px 16px; }
+  .hero h1 { font-size: 26px; }
+  .hero p { max-width: 100%; }
+
+  .ctaRow { gap: 10px; }
+  .btn { width: 100%; justify-content: center; }
+
+  .grid { grid-template-columns: 1fr; }
+
+  .footer {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+  }
+}
+
+/* Extra: pantallas muy pequeñas */
+@media (max-width: 420px) {
+  .hero h1 { font-size: 24px; }
+  .btn { padding: 10px 12px; border-radius: 12px; }
+}

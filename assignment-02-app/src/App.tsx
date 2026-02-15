@@ -4,45 +4,78 @@ export default function App() {
   return (
     <div className="page">
       <header className="nav">
-        <div className="brand">Arqui CDN</div>
-        <div className="pill">Assignment-02</div>
+        <div className="brand">
+          <span className="dot" />
+          <span>Arqui CDN</span>
+        </div>
+
+        <div className="navRight">
+          <span className="pill">Assignment-02</span>
+        </div>
       </header>
 
       <main className="container">
         <section className="hero">
-          <h1>Aplicación estática desplegada con CDN (AWS CloudFront)</h1>
-          <p>
-            Esta app fue construida con Vite + React y se despliega automáticamente a S3.
-            CloudFront sirve el contenido globalmente para mejor rendimiento.
-          </p>
-          <div className="ctaRow">
-            <a className="btn" href="#features">Ver características</a>
-            <a className="btn ghost" href="#about">Acerca del proyecto</a>
+          <div className="heroInner">
+            <h1>Aplicación estática en AWS con CloudFront (CDN)</h1>
+            <p>
+              Construida con <b>Vite + React + TypeScript</b>. Se despliega a <b>S3</b> y se
+              sirve públicamente por <b>CloudFront</b>. El pipeline invalida la caché para
+              mostrar cambios al instante.
+            </p>
+
+            <div className="ctaRow">
+              <a className="btn" href="#features">Ver características</a>
+              <a className="btn ghost" href="#about">Acerca del proyecto</a>
+            </div>
+
+            <div className="stats">
+              <div className="stat">
+                <div className="statNum">Vite</div>
+                <div className="statLabel">Build → dist/</div>
+              </div>
+              <div className="stat">
+                <div className="statNum">S3</div>
+                <div className="statLabel">Hosting de archivos</div>
+              </div>
+              <div className="stat">
+                <div className="statNum">CDN</div>
+                <div className="statLabel">CloudFront global</div>
+              </div>
+            </div>
           </div>
         </section>
 
         <section id="features" className="grid">
           <article className="card">
             <h3>Build con Vite</h3>
-            <p>Genera la carpeta <code>dist/</code> lista para subir al CDN.</p>
+            <p>
+              Genera la carpeta <code>dist/</code> lista para subir al bucket de S3.
+            </p>
           </article>
+
           <article className="card">
-            <h3>Pipeline CI/CD</h3>
-            <p>GitHub Actions construye y sube automáticamente al bucket de S3.</p>
+            <h3>CI/CD con GitHub</h3>
+            <p>
+              GitHub Actions compila, sincroniza a S3 e invalida CloudFront automáticamente.
+            </p>
           </article>
+
           <article className="card">
-            <h3>CloudFront</h3>
-            <p>Se invalida la caché para reflejar cambios al instante.</p>
+            <h3>Secretos con Doppler</h3>
+            <p>
+              Variables de AWS centralizadas en Doppler y sincronizadas hacia GitHub Secrets.
+            </p>
           </article>
         </section>
 
         <section id="about" className="card wide">
-          <h2>¿Qué estoy demostrando?</h2>
+          <h2>¿Qué demuestra esta práctica?</h2>
           <ul>
-            <li>Proyecto configurado con Vite (React + TS).</li>
-            <li>Despliegue automatizado a AWS S3.</li>
-            <li>Distribución pública a través de CloudFront (CDN).</li>
-            <li>Gestión de secretos con Doppler y sincronización con GitHub.</li>
+            <li>Proyecto creado con Vite (React + TS).</li>
+            <li>Despliegue a AWS S3 desde un pipeline.</li>
+            <li>Entrega por CDN (CloudFront) con invalidación de caché.</li>
+            <li>Gestión de secretos con Doppler + sincronización con GitHub.</li>
           </ul>
         </section>
 
