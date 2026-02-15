@@ -42,14 +42,6 @@ Aplicación estática servida desde CloudFront.
 ---
 
 
-## 5. URL Pública de la Aplicación
-
-La aplicación se encuentra disponible en:
-
-👉 https://d3r3mvqv0385y9.cloudfront.net
-
----
-
 
 ## 5. URL Pública de la Aplicación
 
