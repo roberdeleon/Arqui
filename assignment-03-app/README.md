@@ -1,73 +1,40 @@
-# React + TypeScript + Vite
+# Assignment 03 – Deploy en AWS Elastic Beanstalk
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+##  Captura de la Aplicación
 
-Currently, two official plugins are available:
+![Aplicación Funcionando](docs/screenshots/app-running.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+La aplicación fue desarrollada con Vite + React y desplegada en AWS Elastic Beanstalk utilizando Docker.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+##  URL de AWS Elastic Beanstalk
 
-## Expanding the ESLint configuration
+La aplicación puede verificarse en la siguiente URL:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+http://assignment-03-app-env-2.eba-2cuerabr.us-east-1.elasticbeanstalk.com/
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+##  Captura de configuración de AWS Beanstalk
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+![Beanstalk Overview](docs/screenshots/beanstalk-overview.png)
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+El entorno fue configurado usando la plataforma Docker running on 64bit Amazon Linux 2023.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+##  Uso de Husky
+
+Se implementó Husky para ejecutar validaciones antes de realizar commits.
+
+Husky fue configurado para ejecutar tareas como:
+
+- Validación de estilos (lint)
+- Prevención de commits con errores
+
+Esto asegura calidad y consistencia en el código antes de subir cambios al repositorio.
+
+Ejemplo de funcionamiento:
+
+Cuando se realiza un commit, Husky ejecuta automáticamente las reglas configuradas antes de permitir el commit.
