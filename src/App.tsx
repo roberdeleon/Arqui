@@ -6,7 +6,7 @@ export default function App() {
       <header className="header">
         <div className="badge">ASSIGNMENT 04</div>
 
-        {/*  LÍNEA NUEVA (Commit 2) */}
+        {/*  LÍNEA NUEVA  */}
         <div
           style={{
             marginTop: "12px",
@@ -18,7 +18,7 @@ export default function App() {
             display: "inline-block",
           }}
         >
-           Commit 2 - Cambio visible para generar nuevo tag (SHA) en DockerHub
+           Commit 3 - Nueva versión generando otro SHA en DockerHub
         </div>
 
         <h1>Docker Hub + GitHub Actions</h1>
