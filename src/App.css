@@ -1,42 +1,126 @@
-#root {
-  max-width: 1280px;
+:root {
+  --bg: #07140c;
+  --panel: rgba(10, 35, 22, 0.75);
+  --panel2: rgba(8, 26, 16, 0.75);
+  --border: rgba(80, 255, 170, 0.18);
+  --text: #eafff3;
+  --muted: rgba(234, 255, 243, 0.72);
+  --green: #34f5a6;
+  --green2: #1fd18b;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
+    "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: radial-gradient(1200px 600px at 30% 20%, rgba(52, 245, 166, 0.18), transparent 60%),
+    radial-gradient(900px 500px at 80% 30%, rgba(31, 209, 139, 0.16), transparent 55%),
+    linear-gradient(180deg, #050e08 0%, var(--bg) 60%, #040a06 100%);
+  min-height: 100vh;
+}
+
+.page {
+  max-width: 1050px;
   margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  padding: 48px 18px 40px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.header {
+  background: linear-gradient(180deg, rgba(15, 55, 35, 0.7), rgba(8, 24, 15, 0.7));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 28px 26px;
+  box-shadow: 0 16px 40px var(--shadow);
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.badge {
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(52, 245, 166, 0.12);
+  border: 1px solid rgba(52, 245, 166, 0.28);
+  color: var(--green);
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header h1 {
+  margin: 12px 0 10px;
+  font-size: 42px;
+  line-height: 1.05;
+}
+
+.subtitle {
+  margin: 0;
+  color: var(--muted);
+  max-width: 900px;
+  line-height: 1.5;
+  font-size: 15.5px;
+}
+
+.grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 18px;
 }
 
 .card {
-  padding: 2em;
+  background: linear-gradient(180deg, var(--panel), var(--panel2));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 18px 18px;
+  box-shadow: 0 14px 32px var(--shadow);
 }
 
-.read-the-docs {
-  color: #888;
+.card h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+  color: var(--green);
+}
+
+.card p,
+.card li {
+  color: var(--muted);
+  line-height: 1.55;
+  font-size: 14.5px;
+}
+
+.card code {
+  color: var(--text);
+  background: rgba(52, 245, 166, 0.12);
+  border: 1px solid rgba(52, 245, 166, 0.2);
+  padding: 2px 6px;
+  border-radius: 8px;
+}
+
+.card ul,
+.card ol {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.footer {
+  margin-top: 16px;
+  background: linear-gradient(180deg, rgba(15, 55, 35, 0.45), rgba(8, 24, 15, 0.45));
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 16px 18px;
+  color: var(--muted);
+}
+
+@media (max-width: 860px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .header h1 {
+    font-size: 34px;
+  }
 }
