@@ -5,6 +5,22 @@ export default function App() {
     <div className="page">
       <header className="header">
         <div className="badge">ASSIGNMENT 04</div>
+
+        {/*  LÍNEA NUEVA (Commit 2) */}
+        <div
+          style={{
+            marginTop: "12px",
+            padding: "10px 14px",
+            borderRadius: "12px",
+            background: "#16a34a",
+            color: "white",
+            fontWeight: 700,
+            display: "inline-block",
+          }}
+        >
+           Commit 2 - Cambio visible para generar nuevo tag (SHA) en DockerHub
+        </div>
+
         <h1>Docker Hub + GitHub Actions</h1>
         <p className="subtitle">
           Aplicación web estática creada con Vite + React + TypeScript, dockerizada y publicada
@@ -48,9 +64,9 @@ export default function App() {
         <section className="card">
           <h2>Entregables</h2>
           <ul>
-            <li>📸 Captura de la aplicación (esta pantalla).</li>
-            <li>🔗 URL de la imagen publicada en Docker Hub.</li>
-            <li>📸 Captura de Docker Hub mostrando tags (latest + SHA).</li>
+            <li> Captura de la aplicación .</li>
+            <li> URL de la imagen publicada en Docker Hub.</li>
+            <li> Captura de Docker Hub mostrando tags.</li>
           </ul>
         </section>
       </main>
