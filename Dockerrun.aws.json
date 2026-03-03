@@ -1,0 +1,13 @@
+
+{
+  "AWSEBDockerrunVersion": "1",
+  "Image": {
+    "Name": "983145326305.dkr.ecr.us-east-1.amazonaws.com/assignment-03-app:v6",
+    "Update": "true"
+  },
+  "Ports": [
+    {
+      "ContainerPort": 80
+    }
+  ]
+}
