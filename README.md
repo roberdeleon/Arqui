@@ -1,73 +1,71 @@
-# React + TypeScript + Vite
+# 📦 Assignment 04 – Docker Hub + GitHub Actions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 👨‍💻 Autor
+Robert De Leon  
+Branch de entrega: `assignment-04`
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+#  Descripción del Proyecto
 
-## React Compiler
+Esta actividad consiste en desarrollar una aplicación web estática utilizando Vite + React + TypeScript, dockerizarla y configurar un pipeline de integración continua (CI/CD) que construya y publique automáticamente la imagen en Docker Hub.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+El pipeline debe generar automáticamente:
 
-## Expanding the ESLint configuration
+- 🏷 Tag `latest`
+- 🏷 Tag con el SHA del commit
+- 🏷 Tag `assignment-04`
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Cada commit en la rama `assignment-04` genera una nueva imagen en Docker Hub.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+#  Captura de la Aplicación
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+La siguiente imagen muestra la aplicación ejecutándose correctamente:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+![Aplicación funcionando](docs/app-running.png)
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+---
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+#  Imagen publicada en Docker Hub
+
+Repositorio de la imagen:
+
+ https://hub.docker.com/r/robertdl23/arqui-app
+
+La imagen se genera automáticamente mediante GitHub Actions.
+
+---
+
+#  Evidencia de imágenes y tags en Docker Hub
+
+En la siguiente captura se observan:
+
+- Tag `latest`
+- Tag `assignment-04`
+- Múltiples tags con SHA distintos (correspondientes a commits diferentes)
+
+![Docker Hub Tags](docs/dockerhub-tags.png)
+
+---
+
+#  Configuración del Pipeline CI/CD
+
+El workflow se encuentra en:
+
+.github/workflows/assignment-04.yml
+
+Este realiza automáticamente:
+
+1. Checkout del código
+2. Login en Docker Hub
+3. Build de la imagen Docker
+4. Push automático con múltiples tags
+
+Configuración principal del tagging:
+
+```yaml
+tags: |
+  robertdl23/arqui-app:latest
+  robertdl23/arqui-app:${{ github.sha }}
