@@ -1,9 +1,9 @@
-name: Build and Push Docker Image
+name: Build and Push Docker Image (Assignment 04)
 
 on:
   push:
-    branches: ["assignment-04"]
-  workflow_dispatch:
+    branches:
+      - assignment-04
 
 jobs:
   build-and-push:
@@ -25,4 +25,6 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: robertdl23/arqui-app:assignment-04
+          tags: |
+            robertdl23/arqui-app:latest
+            robertdl23/arqui-app:${{ github.sha }}
