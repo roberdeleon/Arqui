@@ -6,7 +6,7 @@ export default function Home() {
   const [items, setItems] = useState([]);
   const [name, setName] = useState("");
 
-  const API_URL = "http://localhost:3001";
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
   async function loadItems() {
     const res = await fetch(`${API_URL}/items`, { cache: "no-store" });
