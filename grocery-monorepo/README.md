@@ -10,15 +10,17 @@ La aplicación fue desarrollada como un monorepo utilizando Turborepo. El fronte
 
 ## URL del frontend
 
-http://localhost:3000
+https://grocery-web-git-assignment-05-roberdeleons-projects.vercel.app
 
 ---
 
 ## URL del backend
 
-http://localhost:3001/health
-http://localhost:3001/items
-http://localhost:3001/docs
+https://grocery-api-6y0n.onrender.com/health
+
+https://grocery-api-6y0n.onrender.com/items
+
+https://grocery-api-6y0n.onrender.com/docs
 
 
 ---
@@ -76,6 +78,11 @@ Estructura principal:
 - Neon
 - Prisma
 - Swagger
+- Vercel
+- Render
+- Github
+
+
 
 ---
 
