@@ -2,7 +2,7 @@
 
 ## Captura de la aplicación
 
-![Aplicación funcionando](docs/screenshots/frontend.png)
+![Aplicación funcionando](docs/screenshots/frontende.png)
 
 La aplicación fue desarrollada como un monorepo utilizando Turborepo. El frontend fue construido con Next.js, el backend con Express.js y la base de datos con PostgreSQL en Neon. La aplicación permite agregar productos, visualizarlos, marcarlos como completados y eliminarlos.
 
@@ -43,7 +43,7 @@ Las migraciones fueron generadas con Prisma para reflejar la estructura de la ba
 
 ## Documentación de la API
 
-![Swagger](docs/screenshots/swagger.png)
+![Swagger](docs/screenshots/swaggere.png)
 
 La API cuenta con documentación en Swagger para visualizar y probar los endpoints disponibles del backend.
 
