@@ -1,0 +1,14 @@
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: semana4-app-ingressroute
+  namespace: semana-4
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`app.roberth-herrera.com`)
+      kind: Rule
+      services:
+        - name: semana4-app-service
+          port: 80

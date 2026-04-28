@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: semana4-app-service
+  namespace: semana-4
+spec:
+  selector:
+    app: semana4-app
+  ports:
+    - port: 80
+      targetPort: 80
